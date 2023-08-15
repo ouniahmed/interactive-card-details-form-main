@@ -88,18 +88,18 @@ body {
 }
 
 .card {
-	height: 12rem;
+	height: 9.8rem;
 	width: 18rem;
 }
 
 .card-front {
 	background: url('/images/bg-card-front.png'), no-repeat, center;
-	background-size: 100% 100%;
-	transform: translateY(-3.76rem) translateX(1.2rem);
+	background-size: 100%;
+	transform: translateY(-2.2rem) translateX(1.2rem);
 }
 
 .card-back {
 	background: url('/images/bg-card-back.png'), no-repeat, center;
-	background-size: 100% 100%;
-	transform: translateY(1.5rem) translateX(4.5rem);
+	background-size: 100%;
+	transform: translateY(2rem) translateX(4.5rem);
 }
