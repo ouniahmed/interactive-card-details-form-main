@@ -22,17 +22,19 @@
 		<main class="flex-flow">
 			<div class="bg">
 				<div class="card card-back">
-					<p>000</p>
+					<p class="card-cvc">000</p>
 				</div>
-				<div class="card card-front">
-					<div class="circles">
+				<div class="card card-front flex-flow">
+					<div class="circles flex-flow">
 						<div class="circle"></div>
-						<div class="circle"></div>
+						<div class="circle" data-circle="small"></div>
 					</div>
-					<p>0000 0000 0000 0000</p>
-					<div class="flex-flow">
-						<p>Jane Appleseed</p>
-						<p>00/00</p>
+					<div>
+						<p class="card-number">0000 0000 0000 0000</p>
+						<div class="card-info flex-flow">
+							<p>Jane Appleseed</p>
+							<p>00/00</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -49,7 +51,7 @@
 					<div class="cred">
 						<div class="cred__date flex-flow">
 							<label for="mm">Exp. Date (MM/YY)</label>
-							<div class="date-inpu flex-flow">
+							<div class="date-input flex-flow">
 								<input type="text" name="mm" placeholder="MM" />
 								<input type="text" name="yy" placeholder="YY" />
 							</div>
@@ -63,15 +65,5 @@
 				</form>
 			</div>
 		</main>
-
-		<!-- Completed state start -->
-
-		Thank you! We've added your card details Continue
-
-		<!-- <div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-			Coded by <a href="#">Ahmed Ouni</a>.
-		</div> -->
 	</body>
 </html>

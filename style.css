@@ -4,6 +4,11 @@
 
 	--clr-secondary-600: hsl(0, 100%, 66%);
 
+	--clr-neutral-900: hsl(278, 68%, 11%);
+	--clr-neutral-500: hsl(279, 6%, 55%);
+	--clr-neutral-200: hsl(270, 3%, 87%);
+	--clr-neutral-100: hsl(0, 0%, 100%);
+
 	--ff-grotesk: 'Space Grotesk', sans-serif;
 
 	--fw-base: 500;
@@ -70,6 +75,7 @@ body {
 	font-size: 1.125rem;
 	font-family: var(--ff-grotesk);
 	font-weight: var(--fw-base);
+	color: var(--clr-neutral-900);
 }
 
 /* utilities */
@@ -81,6 +87,9 @@ body {
 
 /* styles */
 
+main {
+}
+
 .bg {
 	background: url('/images/bg-main-mobile.png'), no-repeat, center;
 	background-size: cover;
@@ -90,12 +99,50 @@ body {
 .card {
 	height: 9.8rem;
 	width: 18rem;
+	justify-content: space-around;
+	--card-padding: 1em;
+	color: var(--clr-neutral-100);
 }
 
 .card-front {
 	background: url('/images/bg-card-front.png'), no-repeat, center;
 	background-size: 100%;
 	transform: translateY(-2.2rem) translateX(1.2rem);
+	padding: 0.5em var(--card-padding);
+}
+
+.circles {
+	flex-direction: row;
+	gap: 1rem;
+	align-items: center;
+}
+
+.circle {
+	width: 2rem;
+	height: 2rem;
+	background-color: white;
+	border-radius: 50%;
+	aspect-ratio: 1 / 1;
+}
+
+.circle[data-circle='small'] {
+	background-color: transparent;
+	border: 1px solid var(--clr-neutral-100);
+	width: 0.9rem;
+	height: 0.9rem;
+}
+
+.card-number {
+	letter-spacing: 2.5px;
+}
+
+.card-info {
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 0.666rem;
+	margin-top: 0.5rem;
+	opacity: 0.8;
+	text-transform: uppercase;
 }
 
 .card-back {
@@ -104,6 +151,40 @@ body {
 	transform: translateY(2rem) translateX(4.5rem);
 }
 
+.card-cvc {
+	position: relative;
+	left: 13.7rem;
+	top: 4.35rem;
+	font-size: 0.666rem;
+	color: var(--clr-neutral-100);
+}
+
 .form {
-	margin: 4.5rem 0 0 0;
+	margin: 6rem 0 0 0;
+	padding: 0 1.5em;
+}
+
+form {
+	display: grid;
+	grid-template-rows: 1fr;
+	gap: 1rem;
+}
+
+label,
+.card-cvc {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.btn {
+	color: var(--clr-neutral-100);
+	background-color: var(--clr-neutral-900);
+	cursor: pointer;
+	padding: 0.8em;
+	border-radius: 0.5rem;
+	border-style: none;
+}
+
+.btn:is(:hover, :focus) {
+	background: linear-gradient(var(--clr-gradient-600), var(--clr-gradient-300));
 }
